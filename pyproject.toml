@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scoreforge"
+version = "0.1.0"
+description = "ScoreForge — 从零手写的 score-based 生成模型基准（DDPM + DDIM + cosine 调度），集大成复用顶级算法，bit 级可复现。"
+readme = "README.md"
+authors = [{ name = "晨星" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.9",
+    "scikit-learn>=1.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scoreforge*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "PL", "RUF", "S"]
+# 合理忽略项：
+#  RUF001/002/003 — 中文文档与注释中的全角标点是中文规范，非歧义。
+#  E402 — cli 顶部为「先于 numpy import 钉死 BLAS 线程」刻意设计，import 不在文件顶端是必需。
+#  PLC0415 — 可选依赖（scikit-learn）的惰性 import，属刻意设计。
+#  BLE001/S110 — 防御性 best-effort fallback（如 numpy/依赖可用性探测）。
+#  B905 — zip 显式 strict 在非对称 zip 场景下非必需。
+#  PLR0913/PLR0917 — ML 网络/调度构造函数参数较多，属合理设计。
+#  PLR2004 — 领域常量（如 0.95 门禁阈值）的比较。
+ignore = [
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    "E402",
+    "PLC0415",
+    "BLE001",
+    "S110",
+    "B905",
+    "PLR0913",
+    "PLR0917",
+    "PLR2004",
+    "S311",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]

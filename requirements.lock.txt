@@ -1,0 +1,13 @@
+iniconfig==2.3.0
+joblib==1.6.0
+numpy==2.5.4
+packaging==26.3
+pluggy==1.6.0
+pytest==9.1.1
+pytest-cov==7.1.0
+ruff==0.16.10
+scikit-learn==1.9.1
+scipy==1.16.3
+threadpoolctl==3.7.0
+typing-inspection==0.4.4
+typing_extensions==4.16.0

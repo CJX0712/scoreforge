@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# 本地 benchmark 产物（fast 模式）
+benchmark_fast.json
+
+# 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

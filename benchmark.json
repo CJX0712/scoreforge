@@ -1,0 +1,662 @@
+{
+  "meta": {
+    "system": "ScoreForge",
+    "author": "晨星",
+    "version": "0.1.0",
+    "flagship": "ScoreFuse (DDPM + cosine + DDIM)"
+  },
+  "config": {
+    "seeds": [
+      7,
+      42,
+      123
+    ],
+    "dgps": [
+      "moons",
+      "ring8",
+      "grid25",
+      "checkerboard"
+    ],
+    "n_train": 2000,
+    "n_sample": 2000,
+    "steps": 3000,
+    "batch": 256,
+    "lr": 0.002,
+    "schedule": "cosine",
+    "T": 1000,
+    "sampler": "ddim",
+    "sampler_steps": 50,
+    "eta": 0.0,
+    "net_dims": [
+      64,
+      64,
+      2
+    ],
+    "time_emb_dim": 16
+  },
+  "results": [
+    {
+      "method": "scorefuse",
+      "dgp": "moons",
+      "seed": 7,
+      "mmd": 0.11214076148258623,
+      "wasserstein": 1.1213765964585953,
+      "coverage": NaN,
+      "elapsed_sec": 3.4947299000014027
+    },
+    {
+      "method": "gmm",
+      "dgp": "moons",
+      "seed": 7,
+      "mmd": -0.00012576529825047977,
+      "wasserstein": 0.5597186638173736,
+      "coverage": NaN,
+      "elapsed_sec": 1.5877311000003829
+    },
+    {
+      "method": "kde",
+      "dgp": "moons",
+      "seed": 7,
+      "mmd": 0.003406665282899568,
+      "wasserstein": 0.6783128450938786,
+      "coverage": NaN,
+      "elapsed_sec": 0.0010221999982604757
+    },
+    {
+      "method": "gaussian",
+      "dgp": "moons",
+      "seed": 7,
+      "mmd": 0.010486536441180583,
+      "wasserstein": 0.6538714443752177,
+      "coverage": NaN,
+      "elapsed_sec": 0.0005689999998139683
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "moons",
+      "seed": 42,
+      "mmd": 0.09077287545873991,
+      "wasserstein": 1.1118055546013907,
+      "coverage": NaN,
+      "elapsed_sec": 2.6731074999988778
+    },
+    {
+      "method": "gmm",
+      "dgp": "moons",
+      "seed": 42,
+      "mmd": -0.00022050199121304015,
+      "wasserstein": 0.7007176206744516,
+      "coverage": NaN,
+      "elapsed_sec": 0.3986421000008704
+    },
+    {
+      "method": "kde",
+      "dgp": "moons",
+      "seed": 42,
+      "mmd": 0.002580728122659859,
+      "wasserstein": 0.7159787885336625,
+      "coverage": NaN,
+      "elapsed_sec": 0.002099999997881241
+    },
+    {
+      "method": "gaussian",
+      "dgp": "moons",
+      "seed": 42,
+      "mmd": 0.012830229682044725,
+      "wasserstein": 0.640845137354132,
+      "coverage": NaN,
+      "elapsed_sec": 0.0003619999988586642
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "moons",
+      "seed": 123,
+      "mmd": 0.1121058073124549,
+      "wasserstein": 1.1737304745483568,
+      "coverage": NaN,
+      "elapsed_sec": 2.836570399998891
+    },
+    {
+      "method": "gmm",
+      "dgp": "moons",
+      "seed": 123,
+      "mmd": -8.880705421721036e-05,
+      "wasserstein": 0.41479208141866897,
+      "coverage": NaN,
+      "elapsed_sec": 0.4403907000014442
+    },
+    {
+      "method": "kde",
+      "dgp": "moons",
+      "seed": 123,
+      "mmd": 0.0032680522497091635,
+      "wasserstein": 0.7700140119614131,
+      "coverage": NaN,
+      "elapsed_sec": 0.0011897000003955327
+    },
+    {
+      "method": "gaussian",
+      "dgp": "moons",
+      "seed": 123,
+      "mmd": 0.01073352804181582,
+      "wasserstein": 0.7031149338515196,
+      "coverage": NaN,
+      "elapsed_sec": 0.001070800000888994
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "ring8",
+      "seed": 7,
+      "mmd": 0.07423945485909045,
+      "wasserstein": 0.9051617384162051,
+      "coverage": 1.0,
+      "elapsed_sec": 2.863116700002138
+    },
+    {
+      "method": "gmm",
+      "dgp": "ring8",
+      "seed": 7,
+      "mmd": 0.000591853698539313,
+      "wasserstein": 1.0840689844765283,
+      "coverage": 1.0,
+      "elapsed_sec": 0.19222259999878588
+    },
+    {
+      "method": "kde",
+      "dgp": "ring8",
+      "seed": 7,
+      "mmd": 0.0006786520087186387,
+      "wasserstein": 0.44842824489026406,
+      "coverage": 1.0,
+      "elapsed_sec": 0.0010145000014745165
+    },
+    {
+      "method": "gaussian",
+      "dgp": "ring8",
+      "seed": 7,
+      "mmd": 0.017971467142630537,
+      "wasserstein": 0.9568973845233805,
+      "coverage": 1.0,
+      "elapsed_sec": 0.0003125000002910383
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "ring8",
+      "seed": 42,
+      "mmd": 0.09699631337531134,
+      "wasserstein": 0.9445512057268497,
+      "coverage": 1.0,
+      "elapsed_sec": 2.8998347999986436
+    },
+    {
+      "method": "gmm",
+      "dgp": "ring8",
+      "seed": 42,
+      "mmd": -0.0003253121606962006,
+      "wasserstein": 1.0395379166716274,
+      "coverage": 1.0,
+      "elapsed_sec": 0.23648360000152024
+    },
+    {
+      "method": "kde",
+      "dgp": "ring8",
+      "seed": 42,
+      "mmd": 0.00021189953154931995,
+      "wasserstein": 0.3142834166535006,
+      "coverage": 1.0,
+      "elapsed_sec": 0.002610100000310922
+    },
+    {
+      "method": "gaussian",
+      "dgp": "ring8",
+      "seed": 42,
+      "mmd": 0.020420963105544754,
+      "wasserstein": 0.9417771995172384,
+      "coverage": 1.0,
+      "elapsed_sec": 0.00031089999902178533
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "ring8",
+      "seed": 123,
+      "mmd": 0.0772520434586309,
+      "wasserstein": 0.9075533601230299,
+      "coverage": 1.0,
+      "elapsed_sec": 2.611520999998902
+    },
+    {
+      "method": "gmm",
+      "dgp": "ring8",
+      "seed": 123,
+      "mmd": -0.00034374872921993926,
+      "wasserstein": 0.9680729706717768,
+      "coverage": 1.0,
+      "elapsed_sec": 0.14004999999815482
+    },
+    {
+      "method": "kde",
+      "dgp": "ring8",
+      "seed": 123,
+      "mmd": -4.37186019990321e-05,
+      "wasserstein": 0.35573005701968285,
+      "coverage": 1.0,
+      "elapsed_sec": 0.001046200002747355
+    },
+    {
+      "method": "gaussian",
+      "dgp": "ring8",
+      "seed": 123,
+      "mmd": 0.015452826989645452,
+      "wasserstein": 0.9658191335654047,
+      "coverage": 1.0,
+      "elapsed_sec": 0.0003212999981769826
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "grid25",
+      "seed": 7,
+      "mmd": 0.1099947396697527,
+      "wasserstein": 1.0876149428173136,
+      "coverage": 0.96,
+      "elapsed_sec": 3.227765700001328
+    },
+    {
+      "method": "gmm",
+      "dgp": "grid25",
+      "seed": 7,
+      "mmd": 0.00025362021908703625,
+      "wasserstein": 0.815370238801515,
+      "coverage": 1.0,
+      "elapsed_sec": 0.553842799999984
+    },
+    {
+      "method": "kde",
+      "dgp": "grid25",
+      "seed": 7,
+      "mmd": 0.0006238847231950784,
+      "wasserstein": 0.43886682449867853,
+      "coverage": 1.0,
+      "elapsed_sec": 0.0008290000005217735
+    },
+    {
+      "method": "gaussian",
+      "dgp": "grid25",
+      "seed": 7,
+      "mmd": 0.006945835817643187,
+      "wasserstein": 0.7735793789572585,
+      "coverage": 1.0,
+      "elapsed_sec": 0.00035459999708109535
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "grid25",
+      "seed": 42,
+      "mmd": 0.1150166616772006,
+      "wasserstein": 1.1058869952489876,
+      "coverage": 0.92,
+      "elapsed_sec": 2.676598699999886
+    },
+    {
+      "method": "gmm",
+      "dgp": "grid25",
+      "seed": 42,
+      "mmd": 8.37492991047073e-05,
+      "wasserstein": 0.9238469626234282,
+      "coverage": 1.0,
+      "elapsed_sec": 0.5342407999996794
+    },
+    {
+      "method": "kde",
+      "dgp": "grid25",
+      "seed": 42,
+      "mmd": 0.00041765136884908127,
+      "wasserstein": 0.38313403791268674,
+      "coverage": 1.0,
+      "elapsed_sec": 0.0008302999995066784
+    },
+    {
+      "method": "gaussian",
+      "dgp": "grid25",
+      "seed": 42,
+      "mmd": 0.010580032595170707,
+      "wasserstein": 0.7662463632163212,
+      "coverage": 1.0,
+      "elapsed_sec": 0.00030440000045928173
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "grid25",
+      "seed": 123,
+      "mmd": 0.095256858236613,
+      "wasserstein": 1.0087271492923777,
+      "coverage": 0.96,
+      "elapsed_sec": 2.95560309999928
+    },
+    {
+      "method": "gmm",
+      "dgp": "grid25",
+      "seed": 123,
+      "mmd": -0.0002841259901362747,
+      "wasserstein": 0.8927791366247294,
+      "coverage": 1.0,
+      "elapsed_sec": 0.5805803000002925
+    },
+    {
+      "method": "kde",
+      "dgp": "grid25",
+      "seed": 123,
+      "mmd": 1.31727774415058e-05,
+      "wasserstein": 0.38406656530582667,
+      "coverage": 1.0,
+      "elapsed_sec": 0.0008158999989973381
+    },
+    {
+      "method": "gaussian",
+      "dgp": "grid25",
+      "seed": 123,
+      "mmd": 0.0048730633378024635,
+      "wasserstein": 0.728578851718462,
+      "coverage": 1.0,
+      "elapsed_sec": 0.0003103000017290469
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "checkerboard",
+      "seed": 7,
+      "mmd": 0.023336677387332583,
+      "wasserstein": 0.5143277612180871,
+      "coverage": NaN,
+      "elapsed_sec": 2.9241532999985793
+    },
+    {
+      "method": "gmm",
+      "dgp": "checkerboard",
+      "seed": 7,
+      "mmd": 0.00045207669064428746,
+      "wasserstein": 0.7217743733781821,
+      "coverage": NaN,
+      "elapsed_sec": 0.20209600000089267
+    },
+    {
+      "method": "kde",
+      "dgp": "checkerboard",
+      "seed": 7,
+      "mmd": 0.00095618271323894,
+      "wasserstein": 0.23442445067625822,
+      "coverage": NaN,
+      "elapsed_sec": 0.000896200002898695
+    },
+    {
+      "method": "gaussian",
+      "dgp": "checkerboard",
+      "seed": 7,
+      "mmd": 0.008716324418254318,
+      "wasserstein": 0.48800271813723756,
+      "coverage": NaN,
+      "elapsed_sec": 0.0003195999997842591
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "checkerboard",
+      "seed": 42,
+      "mmd": 0.02733141928549432,
+      "wasserstein": 0.5149765469658771,
+      "coverage": NaN,
+      "elapsed_sec": 2.7954334000023664
+    },
+    {
+      "method": "gmm",
+      "dgp": "checkerboard",
+      "seed": 42,
+      "mmd": -0.0002422357010136711,
+      "wasserstein": 0.7802250543263103,
+      "coverage": NaN,
+      "elapsed_sec": 0.36726460000136285
+    },
+    {
+      "method": "kde",
+      "dgp": "checkerboard",
+      "seed": 42,
+      "mmd": -0.00018320657894954628,
+      "wasserstein": 0.19735009999399528,
+      "coverage": NaN,
+      "elapsed_sec": 0.0010126999986823648
+    },
+    {
+      "method": "gaussian",
+      "dgp": "checkerboard",
+      "seed": 42,
+      "mmd": 0.007744491006205889,
+      "wasserstein": 0.4197800172411784,
+      "coverage": NaN,
+      "elapsed_sec": 0.00038210000275284983
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "checkerboard",
+      "seed": 123,
+      "mmd": 0.013216827720292645,
+      "wasserstein": 0.42082317369786837,
+      "coverage": NaN,
+      "elapsed_sec": 2.7122017000001506
+    },
+    {
+      "method": "gmm",
+      "dgp": "checkerboard",
+      "seed": 123,
+      "mmd": -0.0002627090337610216,
+      "wasserstein": 0.881630846735555,
+      "coverage": NaN,
+      "elapsed_sec": 0.24523110000154702
+    },
+    {
+      "method": "kde",
+      "dgp": "checkerboard",
+      "seed": 123,
+      "mmd": 0.0002062388037483709,
+      "wasserstein": 0.20917954213925125,
+      "coverage": NaN,
+      "elapsed_sec": 0.0011285000000498258
+    },
+    {
+      "method": "gaussian",
+      "dgp": "checkerboard",
+      "seed": 123,
+      "mmd": 0.0035619540936044913,
+      "wasserstein": 0.4428059441840939,
+      "coverage": NaN,
+      "elapsed_sec": 0.000414699999964796
+    }
+  ],
+  "reports": [
+    {
+      "method": "scorefuse",
+      "dgp": "moons",
+      "mmd_mean": 0.10500648141792701,
+      "mmd_std": 0.010064689410659338,
+      "wasserstein_mean": 1.1356375418694478,
+      "wasserstein_std": 0.02721770074318083,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "ring8",
+      "mmd_mean": 0.08282927056434423,
+      "mmd_std": 0.010092827453967872,
+      "wasserstein_mean": 0.9190887680886949,
+      "wasserstein_std": 0.01803111683460624,
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "n_seeds": 3
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "grid25",
+      "mmd_mean": 0.10675608652785544,
+      "mmd_std": 0.008385666883947675,
+      "wasserstein_mean": 1.0674096957862265,
+      "wasserstein_std": 0.04215999622286896,
+      "coverage_mean": 0.9466666666666667,
+      "coverage_std": 0.018856180831641232,
+      "n_seeds": 3
+    },
+    {
+      "method": "scorefuse",
+      "dgp": "checkerboard",
+      "mmd_mean": 0.021294974797706517,
+      "mmd_std": 0.0059403611484757325,
+      "wasserstein_mean": 0.4833758272939443,
+      "wasserstein_std": 0.0442321985637132,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    },
+    {
+      "method": "gmm",
+      "dgp": "moons",
+      "mmd_mean": -0.0001450247812269101,
+      "mmd_std": 5.546220858069906e-05,
+      "wasserstein_mean": 0.5584094553034981,
+      "wasserstein_std": 0.1167322835091108,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    },
+    {
+      "method": "gmm",
+      "dgp": "ring8",
+      "mmd_mean": -2.5735730458942285e-05,
+      "mmd_std": 0.0004367665309770014,
+      "wasserstein_mean": 1.0305599572733108,
+      "wasserstein_std": 0.04777880716291407,
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "n_seeds": 3
+    },
+    {
+      "method": "gmm",
+      "dgp": "grid25",
+      "mmd_mean": 1.774784268515628e-05,
+      "mmd_std": 0.0002244398814391605,
+      "wasserstein_mean": 0.8773321126832242,
+      "wasserstein_std": 0.045612555393378135,
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "n_seeds": 3
+    },
+    {
+      "method": "gmm",
+      "dgp": "checkerboard",
+      "mmd_mean": -1.7622681376801747e-05,
+      "mmd_std": 0.0003322327641841887,
+      "wasserstein_mean": 0.794543424813349,
+      "wasserstein_std": 0.06604182926306226,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    },
+    {
+      "method": "kde",
+      "dgp": "moons",
+      "mmd_mean": 0.003085148551756197,
+      "mmd_std": 0.0003611402038081252,
+      "wasserstein_mean": 0.721435215196318,
+      "wasserstein_std": 0.03763513823685303,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    },
+    {
+      "method": "kde",
+      "dgp": "ring8",
+      "mmd_mean": 0.0002822776460896422,
+      "mmd_std": 0.00029907594805984563,
+      "wasserstein_mean": 0.3728139061878159,
+      "wasserstein_std": 0.05608090680714385,
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "n_seeds": 3
+    },
+    {
+      "method": "kde",
+      "dgp": "grid25",
+      "mmd_mean": 0.0003515696231618885,
+      "mmd_std": 0.0002536629890311536,
+      "wasserstein_mean": 0.40202247590573065,
+      "wasserstein_std": 0.026055670134844413,
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "n_seeds": 3
+    },
+    {
+      "method": "kde",
+      "dgp": "checkerboard",
+      "mmd_mean": 0.00032640497934592155,
+      "mmd_std": 0.00047285087297282985,
+      "wasserstein_mean": 0.21365136426983491,
+      "wasserstein_std": 0.015462314714676156,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    },
+    {
+      "method": "gaussian",
+      "dgp": "moons",
+      "mmd_mean": 0.01135009805501371,
+      "mmd_std": 0.0010514572230002827,
+      "wasserstein_mean": 0.6659438385269564,
+      "wasserstein_std": 0.02681652369184241,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    },
+    {
+      "method": "gaussian",
+      "dgp": "ring8",
+      "mmd_mean": 0.01794841907927358,
+      "mmd_std": 0.0020282985523905053,
+      "wasserstein_mean": 0.9548312392020079,
+      "wasserstein_std": 0.009923217407033115,
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "n_seeds": 3
+    },
+    {
+      "method": "gaussian",
+      "dgp": "grid25",
+      "mmd_mean": 0.007466310583538786,
+      "mmd_std": 0.002358748963976048,
+      "wasserstein_mean": 0.7561348646306806,
+      "wasserstein_std": 0.01971367825779814,
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "n_seeds": 3
+    },
+    {
+      "method": "gaussian",
+      "dgp": "checkerboard",
+      "mmd_mean": 0.006674256506021566,
+      "mmd_std": 0.002236207321179662,
+      "wasserstein_mean": 0.45019622652083663,
+      "wasserstein_std": 0.028337800833878716,
+      "coverage_mean": NaN,
+      "coverage_std": NaN,
+      "n_seeds": 3
+    }
+  ],
+  "headline": {
+    "multimodal_mode_coverage_mean": 1.0,
+    "coverage_gate_threshold": 0.95,
+    "per_dgp_coverage": {
+      "ring8": {
+        "scorefuse_cov": 1.0
+      },
+      "grid25": {
+        "scorefuse_cov": 1.0
+      }
+    },
+    "gate_pass": true
+  }
+}
