@@ -5,12 +5,16 @@ on:
     branches: [main]
   pull_request:
 
-jobs:
+env:
+  # 仓库根目录即包体（顶层 __init__.py），需把父目录加入 sys.path 才能 import scoreforge
+  PYTHONPATH: ${{ github.workspace }}/..
+
+
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.13", "3.13"]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
