@@ -9,7 +9,6 @@ env:
   # 仓库根目录即包体（顶层 __init__.py），需把父目录加入 sys.path 才能 import scoreforge
   PYTHONPATH: ${{ github.workspace }}/..
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
